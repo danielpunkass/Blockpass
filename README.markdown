@@ -15,6 +15,8 @@ Blockpass is written with a combination of Objective C and Swift, and expects to
 
 Blockpass requires that you enable "access for assistive devices" for the app. The app should prompt you to make this change when it first launches, after which you must reopen the app. If it doesn't prompt you automatically, make the change manually in System Preferences -> Security & Privacy -> Privacy -> Accessibility.
 
+Note that if you run the app directly from Xcode, it is Xcode that will require "access for assistive devices".
+
 Installation
 ------------
 

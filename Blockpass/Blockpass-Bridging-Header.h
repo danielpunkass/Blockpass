@@ -3,5 +3,4 @@
 //
 
 #import "RSStringMatchingKeyboardTap.h"
-
-#import <RSFoundation/RSFoundation.h>
+#import "RSKeychain.h"

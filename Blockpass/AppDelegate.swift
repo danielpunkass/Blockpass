@@ -122,7 +122,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 		}
 
 		// Register our default ignored app identifiers
-		let defaultIgnoredApps : NSArray = ["com.apple.Terminalz", "com.apple.ScreenSharingz"]
+		let defaultIgnoredApps : NSArray = ["com.apple.Terminal", "com.apple.ScreenSharing"]
 		NSUserDefaults.standardUserDefaults().registerDefaults(["IgnoredAppIdentifiers": defaultIgnoredApps])
 	}
 

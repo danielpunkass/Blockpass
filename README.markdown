@@ -8,6 +8,8 @@ Blockpass aims to save you from the heart-stopping problem of typing your comput
 
 Blockpass is a standard Mac OS X application that runs as a "faceless background application." As such it doesn't show up in the Dock. It also has no user NSStatusItem show it won't show up in the menu bar either. It simply runs quietly in the background, waiting for you to type your password (or whatever string you configure it with), and jolts you with an alert condemning the action.
 
+**Please note:** by default the tool ignores typing that occurs in either Terminal or Screen Sharing.app, it won't interfere with attempts to type your password in those apps.
+
 Requirements
 ------------
 
@@ -28,6 +30,16 @@ Configuration
 The first time you run Blockpass, it will prompt you for a secret string, which will be saved securely in the keychain. The string you enter will dictate which keystrokes cause Blockpass to later interrupt you and prevent your typing the password in plain text. 
 
 If at any time after you first run and configure Blockpass, you wish to change the stored password, you can do so by holding the option key while Blockpass launches. First "killall Blockpass" from the Terminal, then relaunch the app.
+
+Theoretically you should be able to override the built-in default "ignored apps" configuration by declaring your own array of application bundle identifiers, e.g.:
+
+```
+% defaults write com.punkitup.Blockpass IgnoredAppIdentifiers -array com.apple.dt.Xcode com.apple.Safari                             
+% killall Blockpass
+% killall cfprefsd
+```
+
+However in my recent tests this does not seem to be working to effectively override the built-in list. It may have something to do with my system, sandboxing, or both.
 
 Security
 --------

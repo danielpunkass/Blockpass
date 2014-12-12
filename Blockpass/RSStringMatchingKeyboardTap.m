@@ -14,7 +14,7 @@
 @implementation RSStringMatchingKeyboardTap
 
 // From http://stackoverflow.com/questions/9458017/convert-cgkeycode-to-character
-CFStringRef copyStringForKey(CGKeyCode keyCode)
+CFStringRef copyStringForEvent(CGEventRef event)
 {
     TISInputSourceRef currentKeyboard = TISCopyCurrentKeyboardInputSource();
     CFDataRef layoutData =
@@ -27,17 +27,22 @@ CFStringRef copyStringForKey(CGKeyCode keyCode)
     UniChar chars[4];
     UniCharCount realLength;
 
+    CGKeyCode keyCode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
+    CGEventFlags modifiers = CGEventGetFlags(event);
+    static const CGEventFlags cmdModifiers = kCGEventFlagMaskCommand | kCGEventFlagMaskControl | kCGEventFlagMaskAlternate;
+    modifiers &= ~cmdModifiers;
+    
     UCKeyTranslate(keyboardLayout,
                keyCode,
                kUCKeyActionDisplay,
-               0,
+               (modifiers >> 16) & 0xFF,
                LMGetKbdType(),
                kUCKeyTranslateNoDeadKeysBit,
                &keysDown,
                sizeof(chars) / sizeof(chars[0]),
                &realLength,
                chars);
-    CFRelease(currentKeyboard);    
+    CFRelease(currentKeyboard);
 
     return CFStringCreateWithCharacters(kCFAllocatorDefault, chars, 1);
 }
@@ -48,8 +53,7 @@ CGEventRef myKeyEventCallback(CGEventTapProxy proxy,
 	RSStringMatchingKeyboardTap* theTap = (__bridge RSStringMatchingKeyboardTap*)userInfo;
 
 	// Get the newly typed key character
-    CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-	NSString* newKeyString = CFBridgingRelease(copyStringForKey(keycode));
+    NSString* newKeyString = CFBridgingRelease(copyStringForEvent(event));
 
 	// Test for accumulated match with blocked substring
 	NSString* blockedString = [theTap stringToMatch];

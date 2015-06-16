@@ -52,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 
 		// NSStatusWindowLevel doesn't seem available in Swift? And the types for CG constants 
 		// are mismatched Int vs Int32 so we have to do this dance
-		thePrompt.level = Int(CGWindowLevelForKey(CGWindowLevelKey(kCGStatusWindowLevelKey)))
+		thePrompt.level = Int(CGWindowLevelForKey(CGWindowLevelKey.StatusWindowLevelKey));
 
 		thePrompt.makeKeyAndOrderFront(nil)
 
@@ -82,8 +82,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 			let warnAlert = NSAlert();
 			warnAlert.messageText = "Blockpass relies upon having permission to 'control your computer'. If the permission prompt did not appear automatically, go to System Preferences, Security & Privacy, Privacy, Accessibility, and add Blockpass to the list of allowed apps. Then relaunch Blockpass.";
 			warnAlert.layout()
-			let warnPanel = warnAlert.window as NSPanel
-			warnPanel.level = Int(CGWindowLevelForKey(CGWindowLevelKey(kCGStatusWindowLevelKey)))
+			let warnPanel = warnAlert.window as! NSPanel
+			warnPanel.level = Int(CGWindowLevelForKey(CGWindowLevelKey.StatusWindowLevelKey))
  			warnAlert.runModal();
 			NSApplication.sharedApplication().terminate(nil)
 		}
@@ -93,8 +93,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 
 			// Override keychain stored value if option key is held down
 			let keyFlags = NSEvent.modifierFlags()
-			let optionKeyFlags = NSEventModifierFlags.AlternateKeyMask
-			let overrideKeychain = ((keyFlags & optionKeyFlags).rawValue) != 0
+			let overrideKeychain = keyFlags.contains(.AlternateKeyMask)
 			if ((matchedString == nil) || overrideKeychain)
 			{
 				let newMatchedString = passwordByPromptingUser()

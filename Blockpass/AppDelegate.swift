@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 
 	@IBAction func dismissPasswordPrompt(sender: AnyObject)
 	{
-		NSApp.endSheet(self.passwordPrompt!, returnCode:sender.tag())
+		NSApp.stopModalWithCode(sender.tag())
 	}
 
 	func passwordByPromptingUser() -> String?

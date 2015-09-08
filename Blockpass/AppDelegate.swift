@@ -76,7 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 		AXIsProcessTrustedWithOptions(myDict)
 
 		// Unfortunately the prompting mechanism doesn't seem to work from an LSUIElement app
-		if (AXIsProcessTrustedWithOptions(myDict) == UInt8(0))
+		if (!AXIsProcessTrustedWithOptions(myDict))
 		{
 			NSLog("Don't have accessibility access, so we're prompting...")
 			let warnAlert = NSAlert();

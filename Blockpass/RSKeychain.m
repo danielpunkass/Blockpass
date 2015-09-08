@@ -100,10 +100,12 @@
 + (NSString*) secureStringForItemName:(NSString*)keychainItemName accountName:(NSString*)accountName
 {
 	NSData* passwordItemData = [self secureDataForItemName:keychainItemName accountName:accountName];
-	NSString *foundPassword = [[NSString alloc] initWithData:passwordItemData encoding:NSUTF8StringEncoding];
-
+	NSString *foundPassword = nil;
+    if (passwordItemData)
+	{
+        foundPassword = [[NSString alloc] initWithData:passwordItemData encoding:NSUTF8StringEncoding];
+    }
 	return foundPassword;
 }
-
 
 @end

@@ -33,7 +33,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 
 	@IBAction func dismissPasswordPrompt(sender: AnyObject)
 	{
-		NSApp.stopModalWithCode(sender.tag())
+		// We don't have a way of preventing compilation based on SDK version, 
+		// so we have to rely upon Swift version correlating to the pertinent SDK 
+		// version. sender.tag is a method prior to 10.12 SDK, and a property thereafter.
+		#if swift(>=2.3)
+			NSApp.stopModalWithCode(sender.tag)
+		#else
+			NSApp.stopModalWithCode(sender.tag())
+		#endif
 	}
 
 	func passwordByPromptingUser() -> String?
@@ -93,7 +100,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 
 			// Override keychain stored value if option key is held down
 			let keyFlags = NSEvent.modifierFlags()
-			let overrideKeychain = keyFlags.contains(.AlternateKeyMask)
+
+			// We don't have a way of preventing compilation based on SDK version,
+			// so we have to rely upon Swift version correlating to the pertinent SDK
+			// version. .AlternateKeyMask is deined prior to 10.12 SDK, .Option after
+			#if swift(>=2.3)
+				let overrideKeychain = keyFlags.contains(.Option)
+			#else
+				let overrideKeychain = keyFlags.contains(.AlternateKeyMask)
+			#endif
+
 			if ((matchedString == nil) || overrideKeychain)
 			{
 				let newMatchedString = passwordByPromptingUser()

@@ -31,7 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 		return RSKeychain.secureString(forItemName: keychainItemName, accountName:keychainAccountName)
 	}
 
-	@IBAction func dismissPasswordPrompt(sender: AnyObject)
+	@IBAction func dismissPasswordPrompt(_ sender: AnyObject)
 	{
 		let response = NSApplication.ModalResponse(sender.tag)
 		NSApp.stopModal(withCode: response)
@@ -67,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 		return userPassword
 	}
 
-	func applicationDidFinishLaunching(aNotification: NSNotification)
+	func applicationDidFinishLaunching(_ aNotification: Notification)
 	{
 		// Make sure we have ability to intercept keys
 		let promptFlag = kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString

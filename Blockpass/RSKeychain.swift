@@ -36,10 +36,6 @@ struct RSKeychain {
 		}
 	}
 
-	public static func setSecureData(_ newData: Data, forItemName keychainItemName: String, accountName: String) {
-
-	}
-
 	public static func secureData(forItemName keychainItemName: String, accountName: String) -> Data? {
 		var foundData: Data? = nil
 

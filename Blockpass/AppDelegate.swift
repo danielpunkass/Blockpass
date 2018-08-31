@@ -91,7 +91,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 			var matchedString : String? = getSecretTextFromKeychain()
 
 			// Override keychain stored value if option key is held down
-		    let keyFlags : NSEvent.ModifierFlags = []
+		    let keyFlags = NSEvent.modifierFlags
 
 		    let overrideKeychain = keyFlags.contains(.option)
 

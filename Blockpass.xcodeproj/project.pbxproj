@@ -16,7 +16,7 @@
 		65B9C0091A1FC0C20033DA8E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6549C3AF1A1F980E00C62013 /* MainMenu.xib */; };
 		65D8FBBF213995DC001E9F0F /* CGEvent+RSUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D8FBBE213995DC001E9F0F /* CGEvent+RSUtilities.swift */; };
 		65E23B7F2139BF9800BA2FA0 /* RSStringMatchingKeyboardTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D8FBBC2139888B001E9F0F /* RSStringMatchingKeyboardTap.swift */; };
-		65EA85481A3A0DEA00597F56 /* RSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EA85471A3A0DEA00597F56 /* RSKeychain.m */; };
+		65E23B812139C34B00BA2FA0 /* RSKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E23B802139C34B00BA2FA0 /* RSKeychain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +58,7 @@
 		65B9C0071A1FC0060033DA8E /* Blockpass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Blockpass.entitlements; sourceTree = "<group>"; };
 		65D8FBBC2139888B001E9F0F /* RSStringMatchingKeyboardTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSStringMatchingKeyboardTap.swift; sourceTree = "<group>"; };
 		65D8FBBE213995DC001E9F0F /* CGEvent+RSUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGEvent+RSUtilities.swift"; sourceTree = "<group>"; };
-		65EA85461A3A0DEA00597F56 /* RSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKeychain.h; sourceTree = "<group>"; };
-		65EA85471A3A0DEA00597F56 /* RSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKeychain.m; sourceTree = "<group>"; };
+		65E23B802139C34B00BA2FA0 /* RSKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSKeychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +116,7 @@
 				6549C3AB1A1F980E00C62013 /* AppDelegate.swift */,
 				65D8FBBC2139888B001E9F0F /* RSStringMatchingKeyboardTap.swift */,
 				65D8FBBE213995DC001E9F0F /* CGEvent+RSUtilities.swift */,
-				65EA85461A3A0DEA00597F56 /* RSKeychain.h */,
-				65EA85471A3A0DEA00597F56 /* RSKeychain.m */,
+				65E23B802139C34B00BA2FA0 /* RSKeychain.swift */,
 				65AE38271A39F19600E35656 /* PasswordPromptPanel.xib */,
 				6549C3AF1A1F980E00C62013 /* MainMenu.xib */,
 				6549C3AD1A1F980E00C62013 /* Images.xcassets */,
@@ -256,8 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D8FBBF213995DC001E9F0F /* CGEvent+RSUtilities.swift in Sources */,
+				65E23B812139C34B00BA2FA0 /* RSKeychain.swift in Sources */,
 				6549C3AC1A1F980E00C62013 /* AppDelegate.swift in Sources */,
-				65EA85481A3A0DEA00597F56 /* RSKeychain.m in Sources */,
 				65E23B7F2139BF9800BA2FA0 /* RSStringMatchingKeyboardTap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

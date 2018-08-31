@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65216F1B2139AA5200E39EA5 /* CGEvent+RSUtilities-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65216F1A2139AA5200E39EA5 /* CGEvent+RSUtilities-Tests.swift */; };
+		65216F1C2139AB6A00E39EA5 /* CGEvent+RSUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D8FBBE213995DC001E9F0F /* CGEvent+RSUtilities.swift */; };
 		6549C3AC1A1F980E00C62013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549C3AB1A1F980E00C62013 /* AppDelegate.swift */; };
 		6549C3AE1A1F980E00C62013 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6549C3AD1A1F980E00C62013 /* Images.xcassets */; };
-		6549C3C91A1F992000C62013 /* RSStringMatchingKeyboardTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6549C3C81A1F992000C62013 /* RSStringMatchingKeyboardTap.m */; };
 		6549C3CB1A1F9BC700C62013 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6549C3CA1A1F9BC700C62013 /* CoreGraphics.framework */; };
 		65AE38281A39F19600E35656 /* PasswordPromptPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65AE38271A39F19600E35656 /* PasswordPromptPanel.xib */; };
 		65B9C0091A1FC0C20033DA8E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6549C3AF1A1F980E00C62013 /* MainMenu.xib */; };
+		65D8FBBF213995DC001E9F0F /* CGEvent+RSUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D8FBBE213995DC001E9F0F /* CGEvent+RSUtilities.swift */; };
+		65E23B7F2139BF9800BA2FA0 /* RSStringMatchingKeyboardTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D8FBBC2139888B001E9F0F /* RSStringMatchingKeyboardTap.swift */; };
 		65EA85481A3A0DEA00597F56 /* RSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EA85471A3A0DEA00597F56 /* RSKeychain.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65216F152139AA2600E39EA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6549C39E1A1F980E00C62013 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6549C3A51A1F980E00C62013;
+			remoteInfo = Blockpass;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		65B9C0021A1FBCC70033DA8E /* Copy Bundled Frameworks */ = {
@@ -30,23 +43,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		65216F102139AA2600E39EA5 /* BlockpassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockpassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65216F142139AA2600E39EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65216F1A2139AA5200E39EA5 /* CGEvent+RSUtilities-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGEvent+RSUtilities-Tests.swift"; sourceTree = "<group>"; };
 		6549C3A61A1F980E00C62013 /* Blockpass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blockpass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6549C3AA1A1F980E00C62013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6549C3AB1A1F980E00C62013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6549C3AD1A1F980E00C62013 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6549C3B01A1F980E00C62013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6549C3C61A1F991F00C62013 /* Blockpass-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blockpass-Bridging-Header.h"; sourceTree = "<group>"; };
-		6549C3C71A1F992000C62013 /* RSStringMatchingKeyboardTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStringMatchingKeyboardTap.h; sourceTree = "<group>"; };
-		6549C3C81A1F992000C62013 /* RSStringMatchingKeyboardTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStringMatchingKeyboardTap.m; sourceTree = "<group>"; };
 		6549C3CA1A1F9BC700C62013 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		65AE380B1A39E9C800E35656 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		65AE38271A39F19600E35656 /* PasswordPromptPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordPromptPanel.xib; sourceTree = "<group>"; };
 		65B9C0071A1FC0060033DA8E /* Blockpass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Blockpass.entitlements; sourceTree = "<group>"; };
+		65D8FBBC2139888B001E9F0F /* RSStringMatchingKeyboardTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSStringMatchingKeyboardTap.swift; sourceTree = "<group>"; };
+		65D8FBBE213995DC001E9F0F /* CGEvent+RSUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGEvent+RSUtilities.swift"; sourceTree = "<group>"; };
 		65EA85461A3A0DEA00597F56 /* RSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKeychain.h; sourceTree = "<group>"; };
 		65EA85471A3A0DEA00597F56 /* RSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKeychain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		65216F0D2139AA2600E39EA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6549C3A31A1F980E00C62013 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,11 +81,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65216F112139AA2600E39EA5 /* BlockpassTests */ = {
+			isa = PBXGroup;
+			children = (
+				65216F1A2139AA5200E39EA5 /* CGEvent+RSUtilities-Tests.swift */,
+				65216F142139AA2600E39EA5 /* Info.plist */,
+			);
+			path = BlockpassTests;
+			sourceTree = "<group>";
+		};
 		6549C39D1A1F980E00C62013 = {
 			isa = PBXGroup;
 			children = (
 				65AE380B1A39E9C800E35656 /* README.markdown */,
 				6549C3A81A1F980E00C62013 /* Blockpass */,
+				65216F112139AA2600E39EA5 /* BlockpassTests */,
 				6549C3A71A1F980E00C62013 /* Products */,
 				6549C3CA1A1F9BC700C62013 /* CoreGraphics.framework */,
 			);
@@ -72,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				6549C3A61A1F980E00C62013 /* Blockpass.app */,
+				65216F102139AA2600E39EA5 /* BlockpassTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,8 +115,8 @@
 			children = (
 				65B9C0071A1FC0060033DA8E /* Blockpass.entitlements */,
 				6549C3AB1A1F980E00C62013 /* AppDelegate.swift */,
-				6549C3C71A1F992000C62013 /* RSStringMatchingKeyboardTap.h */,
-				6549C3C81A1F992000C62013 /* RSStringMatchingKeyboardTap.m */,
+				65D8FBBC2139888B001E9F0F /* RSStringMatchingKeyboardTap.swift */,
+				65D8FBBE213995DC001E9F0F /* CGEvent+RSUtilities.swift */,
 				65EA85461A3A0DEA00597F56 /* RSKeychain.h */,
 				65EA85471A3A0DEA00597F56 /* RSKeychain.m */,
 				65AE38271A39F19600E35656 /* PasswordPromptPanel.xib */,
@@ -105,6 +139,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		65216F0F2139AA2600E39EA5 /* BlockpassTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65216F172139AA2600E39EA5 /* Build configuration list for PBXNativeTarget "BlockpassTests" */;
+			buildPhases = (
+				65216F0C2139AA2600E39EA5 /* Sources */,
+				65216F0D2139AA2600E39EA5 /* Frameworks */,
+				65216F0E2139AA2600E39EA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65216F162139AA2600E39EA5 /* PBXTargetDependency */,
+			);
+			name = BlockpassTests;
+			productName = BlockpassTests;
+			productReference = 65216F102139AA2600E39EA5 /* BlockpassTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6549C3A51A1F980E00C62013 /* Blockpass */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6549C3C01A1F980E00C62013 /* Build configuration list for PBXNativeTarget "Blockpass" */;
@@ -129,10 +181,16 @@
 		6549C39E1A1F980E00C62013 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0800;
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Daniel Jalkut";
 				TargetAttributes = {
+					65216F0F2139AA2600E39EA5 = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = J79Y4KWZQ2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6549C3A51A1F980E00C62013;
+					};
 					6549C3A51A1F980E00C62013 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 493CVA9A35;
@@ -158,11 +216,19 @@
 			projectRoot = "";
 			targets = (
 				6549C3A51A1F980E00C62013 /* Blockpass */,
+				65216F0F2139AA2600E39EA5 /* BlockpassTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		65216F0E2139AA2600E39EA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6549C3A41A1F980E00C62013 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,17 +242,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		65216F0C2139AA2600E39EA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65216F1C2139AB6A00E39EA5 /* CGEvent+RSUtilities.swift in Sources */,
+				65216F1B2139AA5200E39EA5 /* CGEvent+RSUtilities-Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6549C3A21A1F980E00C62013 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D8FBBF213995DC001E9F0F /* CGEvent+RSUtilities.swift in Sources */,
 				6549C3AC1A1F980E00C62013 /* AppDelegate.swift in Sources */,
 				65EA85481A3A0DEA00597F56 /* RSKeychain.m in Sources */,
-				6549C3C91A1F992000C62013 /* RSStringMatchingKeyboardTap.m in Sources */,
+				65E23B7F2139BF9800BA2FA0 /* RSStringMatchingKeyboardTap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65216F162139AA2600E39EA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6549C3A51A1F980E00C62013 /* Blockpass */;
+			targetProxy = 65216F152139AA2600E39EA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6549C3AF1A1F980E00C62013 /* MainMenu.xib */ = {
@@ -200,6 +284,61 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		65216F182139AA2600E39EA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = J79Y4KWZQ2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = BlockpassTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.red-sweater.bugreports.BlockpassTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		65216F192139AA2600E39EA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = J79Y4KWZQ2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = BlockpassTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.red-sweater.bugreports.BlockpassTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 		6549C3BE1A1F980E00C62013 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -208,13 +347,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -252,13 +401,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -317,6 +476,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		65216F172139AA2600E39EA5 /* Build configuration list for PBXNativeTarget "BlockpassTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65216F182139AA2600E39EA5 /* Debug */,
+				65216F192139AA2600E39EA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6549C3A11A1F980E00C62013 /* Build configuration list for PBXProject "Blockpass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

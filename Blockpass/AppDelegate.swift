@@ -110,15 +110,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 			}
 
 			// If we still don't have a string to match on, just quit
-			if (matchedString == nil)
-			{
+			guard let actualMatchedString = matchedString else {
 				NSLog("No stored password and no user-supplied password. Quitting…")
 				NSApp.terminate(nil)
+				return
 			}
-			else
-			{
-				myPasswordBlocker = RSStringMatchingKeyboardTap(string:matchedString, delegate:self)
-			}
+
+			myPasswordBlocker = RSStringMatchingKeyboardTap(stringToMatch: actualMatchedString, delegate:self)
 		}
 
 		// Register our default ignored app identifiers
@@ -155,7 +153,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, RSStringMatchingKeyboardTapD
 		return shouldIgnore
 	}
 
-    func keyboardTap(_ theTap: RSStringMatchingKeyboardTap!, didMatch theString: String!)
+	func keyboardTap(_ theTap: RSStringMatchingKeyboardTap, didMatchString theString: String)
 	{
 		if (!shouldIgnoreMatches())
 		{

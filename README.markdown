@@ -13,7 +13,7 @@ Blockpass is a standard Mac OS X application that runs as a "faceless background
 Requirements
 ------------
 
-Blockpass is written with a combination of Objective C and Swift, and expects to build for a deployment target of 10.10 or higher. It has not been tested in other environments.
+Blockpass is written in Swift 4.2, and expects to build for a deployment target of 10.10 or higher. It has not been tested in other environments.
 
 Blockpass requires that you enable "access for assistive devices" for the app. The app should prompt you to make this change when it first launches, after which you must reopen the app. If it doesn't prompt you automatically, make the change manually in System Preferences -> Security & Privacy -> Privacy -> Accessibility.
 
